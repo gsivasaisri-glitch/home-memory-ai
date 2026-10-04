@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Memory AI | Never Forget Where You Kept It</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #f7f9fc;
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 8%;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid #e8ebf2;
+    }
+    .logo { font-size: 1.35rem; font-weight: 800; color: #5b45d6; }
+    nav a { text-decoration: none; color: #4b5568; margin-left: 25px; font-weight: 600; }
+    .hero {
+      padding: 90px 8% 75px;
+      background: linear-gradient(135deg, #f0edff, #ffffff 55%, #e9f8ff);
+      display: grid; grid-template-columns: 1.1fr .9fr; gap: 50px;
+      align-items: center;
+    }
+    .badge {
+      display: inline-block; padding: 8px 14px; border-radius: 30px;
+      background: #e7e2ff; color: #5540c8; font-weight: 700; margin-bottom: 18px;
+    }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.6rem); line-height: 1.05; margin-bottom: 20px; }
+    h1 span { color: #5b45d6; }
+    .hero p { font-size: 1.15rem; color: #596276; max-width: 650px; margin-bottom: 30px; }
+    .buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 13px 22px; border-radius: 10px;
+      text-decoration: none; font-weight: 800; border: 2px solid #5b45d6;
+      cursor: pointer;
+    }
+    .primary { background: #5b45d6; color: white; }
+    .secondary { color: #5b45d6; background: white; }
+    .memory-card {
+      background: white; border-radius: 24px; padding: 28px;
+      box-shadow: 0 20px 50px rgba(42, 48, 80, .12);
+      border: 1px solid #ececf5;
+    }
+    .memory-card h3 { margin-bottom: 18px; }
+    .chat { padding: 14px 16px; border-radius: 14px; margin: 12px 0; }
+    .user { background: #eeeaff; margin-left: 30px; }
+    .ai { background: #edf8f3; margin-right: 30px; }
+    section { padding: 75px 8%; }
+    .section-title { text-align: center; max-width: 700px; margin: 0 auto 45px; }
+    .section-title h2 { font-size: 2.2rem; margin-bottom: 10px; }
+    .section-title p { color: #667085; }
+    .grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    }
+    .feature, .step {
+      background: white; padding: 28px; border-radius: 18px;
+      border: 1px solid #e9edf4; box-shadow: 0 8px 25px rgba(30,40,70,.05);
+    }
+    .icon { font-size: 2rem; margin-bottom: 12px; }
+    .feature h3, .step h3 { margin-bottom: 8px; }
+    .feature p, .step p { color: #687386; }
+    .how { background: #ffffff; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .number {
+      width: 38px; height: 38px; display: grid; place-items: center;
+      background: #5b45d6; color: white; border-radius: 50%;
+      font-weight: 800; margin-bottom: 15px;
+    }
+    .demo {
+      max-width: 900px; margin: auto; background: #151a2a; color: white;
+      padding: 35px; border-radius: 22px;
+    }
+    .demo p { margin: 15px 0; }
+    .demo strong { color: #bdb2ff; }
+    .cta {
+      text-align: center; background: linear-gradient(135deg, #5b45d6, #806df0);
+      color: white;
+    }
+    .cta p { max-width: 650px; margin: 12px auto 25px; opacity: .92; }
+    .cta .secondary { border-color: white; }
+    footer {
+      padding: 28px 8%; text-align: center; background: #111625; color: #c8cfdd;
+    }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 15px 5%; }
+      nav .links { display: none; }
+      .hero, section { padding-left: 5%; padding-right: 5%; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">🏠 Home Memory AI</div>
+  <div class="links">
+    <a href="#features">Features</a>
+    <a href="#how">How It Works</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="badge">🤖 AI-Powered Home Memory</div>
+    <h1>Never Forget <span>Where You Kept It.</span></h1>
+    <p>
+      Home Memory AI helps you remember where you placed your everyday
+      household items. Simply tell the AI what you kept and where —
+      then ask whenever you need it.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="#contact">Get Started</a>
+      <a class="btn secondary" href="#how">See How It Works</a>
+    </div>
+  </div>
+
+  <div class="memory-card">
+    <h3>💬 Ask Home Memory AI</h3>
+    <div class="chat user">I kept my house keys in the study room drawer.</div>
+    <div class="chat ai">✓ Got it! I'll remember that your house keys are in the study room drawer.</div>
+    <div class="chat user">Where are my house keys?</div>
+    <div class="chat ai">🔎 Your house keys are in the <b>study room drawer.</b></div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="section-title">
+    <h2>Everything You Need to Remember</h2>
+    <p>A simple AI assistant designed to reduce the frustration of searching for misplaced household items.</p>
+  </div>
+
+  <div class="grid">
+    <div class="feature">
+      <div class="icon">🎤</div>
+      <h3>Voice Input</h3>
+      <p>Tell Home Memory AI where you kept an item using your voice.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">⌨️</div>
+      <h3>Text Input</h3>
+      <p>Type a quick note about any item and its location.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🧠</div>
+      <h3>AI Memory</h3>
+      <p>Store useful location information and retrieve it when needed.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🔎</div>
+      <h3>Quick Search</h3>
+      <p>Ask where something is and get the saved location instantly.</p>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="section-title">
+    <h2>How It Works</h2>
+    <p>Three simple steps to make your home easier to remember.</p>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="number">1</div>
+      <h3>Tell It</h3>
+      <p>Say or type what you kept and where you placed it.</p>
+    </div>
+    <div class="step">
+      <div class="number">2</div>
+      <h3>Remember It</h3>
+      <p>Home Memory AI organizes the information for easy retrieval.</p>
+    </div>
+    <div class="step">
+      <div class="number">3</div>
+      <h3>Find It</h3>
+      <p>Ask a question later and quickly find the saved location.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>See It in Action</h2>
+    <p>Imagine never having to search every room for a misplaced item again.</p>
+  </div>
+
+  <div class="demo">
+    <p><strong>You:</strong> “I kept my important documents in the top drawer of my bedroom table.”</p>
+    <p><strong>Home Memory AI:</strong> “Saved! I'll remember that.”</p>
+    <p><strong>You later:</strong> “Where are my important documents?”</p>
+    <p><strong>Home Memory AI:</strong> “Your important documents are in the top drawer of your bedroom table.”</p>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2>Ready to Stop Searching?</h2>
+  <p>Make your home easier to remember with Home Memory AI. Save locations today and find your things when you need them.</p>
+  <a class="btn secondary" href="mailto:your-email@example.com">Contact Us</a>
+</section>
+
+<footer>
+  <p>© 2026 Home Memory AI • Smart memory for everyday life</p>
+  <p>Email: your-email@example.com</p>
+</footer>
+
+</body>
+</html>
